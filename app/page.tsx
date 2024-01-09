@@ -1,8 +1,8 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { Flex, Heading, Text, Button } from '@radix-ui/themes'
-import { FontHachiMaruPop } from '@/modules/fonts'
-import { blurHashToDataURL } from '@/modules/blurHashDataURL'
+import { FontHachiMaruPop } from '@/app/internal/fonts'
+import { blurHashToDataURL } from '@/app/internal/blurHashDataURL'
 
 export default () => (
   <>
