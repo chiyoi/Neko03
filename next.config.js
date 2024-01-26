@@ -2,14 +2,7 @@ const { PHASE_DEVELOPMENT_SERVER } = require('next/constants')
 
 module.exports = (phase, { defaultConfig }) => {
   /** @type {import('next').NextConfig} */
-  const config = {
-    ...defaultConfig,
-    images: {
-      loader: 'custom',
-      loaderFile: './imageLoader.js',
-    },
-  }
-
+  const config = defaultConfig
   return phase === PHASE_DEVELOPMENT_SERVER ? {
     ...config,
     async rewrites() {

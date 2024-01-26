@@ -1,5 +1,8 @@
-import type { Metadata, Viewport } from 'next'
 import '@radix-ui/themes/styles.css'
+
+import type { Metadata, Viewport } from 'next'
+import Body from '@/app/components/Body'
+import { ChildrenProps } from '@/app/internal/props'
 
 export const metadata: Metadata = {
   title: 'Neko03',
@@ -16,10 +19,10 @@ export const viewport: Viewport = {
   ],
 }
 
-export default ({ children }: { children: React.ReactNode }) => (
-  <html lang="en">
-    <body style={{ margin: 0 }}>
+export default ({ children }: ChildrenProps) => (
+  <html lang='en'>
+    <Body style={{ margin: 0 }}>
       {children}
-    </body>
+    </Body>
   </html>
 )
