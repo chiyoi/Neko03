@@ -4,9 +4,7 @@ import AppLink from '@/app/components/AppLink'
 import { AppLinkProps } from '@/app/internal/props'
 
 export default () => (
-  <Grid m='9' width='auto' columns='5' gap='5'
-  // style={{ marginTop: 80 }}
-  >
+  <Grid m='9' width='auto' columns='5' gap='5'>
     {apps.map(app => (
       <AppLink key={app.href} {...app} />
     ))}
