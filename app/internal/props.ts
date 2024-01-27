@@ -6,6 +6,7 @@ export type ChildrenProps = {
 
 export type AppLinkProps = {
   title: string,
+  description: string,
   href: string,
   avatar: {
     src: string,

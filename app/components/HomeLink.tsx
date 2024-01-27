@@ -6,7 +6,7 @@ import { moe } from '@/app/internal/moe'
 import { FontHachiMaruPop } from '@/app/internal/fonts'
 import { styled } from '@stitches/react'
 
-export default ({ title, href, avatar }: AppLinkProps) => (
+export default ({ title, href, avatar }: Omit<AppLinkProps, 'description'>) => (
   <Link href={href}>
     <HomeLinkFlex m='auto' p='1' gap='3' justify='center' align='center' style={{
       position: 'fixed',

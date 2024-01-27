@@ -4,7 +4,7 @@ import AppLink from '@/app/components/AppLink'
 import { AppLinkProps } from '@/app/internal/props'
 
 export default () => (
-  <Grid m='9' width='auto' columns='5' gap='5'>
+  <Grid mt='9' mx='5' width='auto' columns='5' gap='5'>
     {apps.map(app => (
       <AppLink key={app.href} {...app} />
     ))}
@@ -14,6 +14,7 @@ export default () => (
 const apps: AppLinkProps[] = [
   {
     title: 'LaTex',
+    description: 'Render LaTeX on type.',
     href: 'https://latex.neko03.moe',
     avatar: {
       src: 'https://latex.neko03.moe/favicon.ico',
@@ -22,6 +23,7 @@ const apps: AppLinkProps[] = [
   },
   {
     title: 'Neko',
+    description: 'Discord assistant.',
     href: 'https://neko.neko03.moe',
     avatar: {
       src: 'https://neko.neko03.moe/favicon.ico',
