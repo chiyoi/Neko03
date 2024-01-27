@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { Connector, useAccount, useConnect, useConnectors } from 'wagmi'
+import { Connector, useAccount, useConnect, useConnectors, useDisconnect } from 'wagmi'
 import { DropdownMenu, IconButton } from '@radix-ui/themes'
 import { AvatarIcon, CopyIcon } from '@radix-ui/react-icons'
 import Blockies from 'react-blockies'
@@ -10,6 +10,7 @@ import { FontNotoSansMono } from '@/app/internal/fonts'
 export default () => {
   const toast = useToast()
   const connectors = useConnectors()
+  const { disconnect } = useDisconnect()
   const { address, isConnected } = useAccount()
   return useMounted() && (
     <DropdownMenu.Root>
@@ -27,30 +28,38 @@ export default () => {
           )}
         </IconButton>
       </DropdownMenu.Trigger>
-      <DropdownMenu.Content>
+      <DropdownMenu.Content variant='soft'>
         {address !== undefined && (
           <DropdownMenu.Item style={{ ...FontNotoSansMono }} onClick={() => {
             navigator.clipboard.writeText(address)
             toast('Address copied~')
           }}>
-            {address}
             <CopyIcon style={{
-              marginLeft: 3,
+              marginRight: 3,
               color: 'var(--accent-11)'
             }} />
+            {address.slice(0, 4) + '...' + address.slice(-2)}
           </DropdownMenu.Item>
         )}
-        {!isConnected && (
-          <>
-            <DropdownMenu.Sub>
-              <DropdownMenu.SubTrigger style={{ ...FontNotoSansMono }}>Connect</DropdownMenu.SubTrigger>
-              <DropdownMenu.SubContent>
-                {connectors.map(connector => (
-                  <WalletOption key={connector.uid} connector={connector} />
-                ))}
-              </DropdownMenu.SubContent>
-            </DropdownMenu.Sub>
-          </>
+        {isConnected ? (
+          <DropdownMenu.Item color='red' onClick={() => disconnect()} style={{ ...FontNotoSansMono }}>
+            Disconnect
+          </DropdownMenu.Item>
+        ) : (
+          <DropdownMenu.Sub>
+            <DropdownMenu.SubTrigger style={{ ...FontNotoSansMono }}>
+              Connect
+            </DropdownMenu.SubTrigger>
+            <DropdownMenu.SubContent>
+              {connectors.length === 0 ? (
+                <DropdownMenu.Item disabled style={{ ...FontNotoSansMono }}>
+                  No Connector
+                </DropdownMenu.Item>
+              ) : connectors.map(connector => (
+                <WalletOption key={connector.uid} connector={connector} />
+              ))}
+            </DropdownMenu.SubContent>
+          </DropdownMenu.Sub>
         )}
       </DropdownMenu.Content>
     </DropdownMenu.Root>

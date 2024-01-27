@@ -4,7 +4,9 @@ import AppLink from '@/app/components/AppLink'
 import { AppLinkProps } from '@/app/internal/props'
 
 export default () => (
-  <Grid mx='3' width='auto' columns='5' gap='5' style={{ marginTop: 80 }}>
+  <Grid m='9' width='auto' columns='5' gap='5'
+  // style={{ marginTop: 80 }}
+  >
     {apps.map(app => (
       <AppLink key={app.href} {...app} />
     ))}
@@ -18,14 +20,6 @@ const apps: AppLinkProps[] = [
     avatar: {
       src: 'https://latex.neko03.moe/favicon.ico',
       blurhash: 'eKN0e#DjI.9Z4.XSMxRPD%Mx.TIU-BWBoJxvWAIU-;S5XSayITMy%2', // cspell: disable-line
-    }
-  },
-  {
-    title: 'Files',
-    href: 'https://files.neko03.moe',
-    avatar: {
-      src: 'https://files.neko03.moe/favicon.ico',
-      blurhash: 'eaO:U}jG*JNa~pv~jFkpbbR+?^WVR5t7MxXnXSn4iwt7?akVVsixSe', // cspell: disable-line
     }
   },
   {
