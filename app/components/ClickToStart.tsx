@@ -21,14 +21,10 @@ export default ({ onClick }: {
   return (
     <Text mt='9' style={{ opacity }} onClick={onClick}>
       {moe('Click to start...').map((c, i) => (
-        <Text
-          key={i}
-          style={{
-            ...FontHachiMaruPop,
-            color: `var(--${c.color}-8)`,
-          }}
-          size={c.char === '★' ? '1' : '5'}
-        >
+        <Text key={i} size={c.char === '★' ? '1' : '5'} style={{
+          ...FontHachiMaruPop,
+          color: `var(--${c.color}-8)`,
+        }}>
           {c.char}
         </Text>
       ))}

@@ -83,7 +83,11 @@ const WalletOption = ({ connector }: {
     })()
   }, [connector])
   return (
-    <DropdownMenu.Item disabled={!ready} style={{ ...FontNotoSansMono }} onClick={() => connect({ connector })}>
+    <DropdownMenu.Item disabled={!ready} onClick={
+      () => connect({ connector })
+    } style={{
+      ...FontNotoSansMono
+    }}>
       {connector.name}
     </DropdownMenu.Item>
   )

@@ -12,15 +12,11 @@ export default ({ title, description, href, avatar }: AppLinkProps) => (
         <AppLinkFlex m='auto' p='3' gap='2' direction='column' justify='center' align='center'>
           <Avatar size='5' src={avatar.src} style={{
             overflow: 'hidden',
-          }} fallback={(
-            <Blurhash
-              hash={avatar.blurhash}
-              width='100%'
-              height='100%'
-              resolutionX={32}
-              resolutionY={32}
-            />
-          )} />
+          }} fallback={
+            <Blurhash width='100%' height='100%' resolutionX={32} resolutionY={32} hash={
+              avatar.blurhash
+            } />
+          } />
           <Text style={{ ...FontNotoSansMono }}>{title}</Text>
         </AppLinkFlex>
       </Link>

@@ -63,19 +63,15 @@ export default () => {
   return (
     <>
       {photos.map((photo, i) => (
-        <Avatar
-          key={photo.filename}
-          src={`/assets/nekos/${photo.filename}`}
-          radius='none'
-          fallback='Nyan~'
-          style={{
-            position: 'fixed',
-            height: '100vh',
-            width: `${widthVH(photo)}vh`,
-            top: 0,
-            left: `${xVH()[i]}vh`,
-          }}
-        />
+        <Avatar key={photo.filename} radius='none' fallback='Nyan~' src={
+          `/assets/nekos/${photo.filename}`
+        } style={{
+          position: 'fixed',
+          height: '100vh',
+          width: `${widthVH(photo)}vh`,
+          top: 0,
+          left: `${xVH()[i]}vh`,
+        }} />
       ))}
     </>
   )

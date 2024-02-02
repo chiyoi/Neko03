@@ -31,14 +31,10 @@ export default ({ title, href, avatar }: Omit<AppLinkProps, 'description'>) => (
       )} />
       <Heading style={{ position: 'relative', top: 5 }}>
         {moe(title).map((c, i) => (
-          <Text
-            key={i}
-            style={{
-              ...FontHachiMaruPop,
-              color: `var(--${c.color}-8)`,
-            }}
-            size={c.char === '★' ? '1' : '6'}
-          >
+          <Text key={i} size={c.char === '★' ? '1' : '6'} style={{
+            ...FontHachiMaruPop,
+            color: `var(--${c.color}-8)`,
+          }}>
             {c.char}
           </Text>
         ))}
