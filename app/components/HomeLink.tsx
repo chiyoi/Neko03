@@ -12,7 +12,6 @@ export default ({ title, href, avatar }: Omit<AppLinkProps, 'description'>) => (
       position: 'fixed',
       left: 5,
       top: 5,
-      opacity: 0.9,
       borderRadius: 5,
     }}>
       <Avatar src={avatar.src} radius='none' style={{
@@ -49,8 +48,11 @@ export default ({ title, href, avatar }: Omit<AppLinkProps, 'description'>) => (
 )
 
 const HomeLinkFlex = styled(Flex, {
-  backgroundColor: 'var(--accent-2)',
+  backgroundColor: 'var(--accent-a3)',
   '&:hover': {
-    backgroundColor: 'var(--accent-3)',
-  }
+    backgroundColor: 'var(--accent-a4)',
+  },
+  '&:active': {
+    backgroundColor: 'var(--accent-a5)',
+  },
 })
