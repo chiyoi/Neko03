@@ -29,7 +29,7 @@ export default ({ title, href, avatar }: Omit<AppLinkProps, 'description'>) => (
         {moe(title).map((c, i) => (
           <Text key={i} size={c.char === '★' ? '1' : '6'} style={{
             ...FontHachiMaruPop,
-            color: `var(--${c.color}-8)`,
+            color: `var(--${c.color}-a8)`,
           }}>
             {c.char}
           </Text>
