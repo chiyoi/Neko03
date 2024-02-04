@@ -21,13 +21,9 @@ export default ({ title, href, avatar }: Omit<AppLinkProps, 'description'>) => (
         maskImage: 'linear-gradient(transparent, black, transparent)',
         WebkitMaskImage: 'linear-gradient(transparent, black, transparent)',
       }} fallback={(
-        <Blurhash
-          hash={avatar.blurhash}
-          width='100%'
-          height='100%'
-          resolutionX={32}
-          resolutionY={32}
-        />
+        <Blurhash width='100%' height='100%' resolutionX={32} resolutionY={32} hash={
+          avatar.blurhash
+        } />
       )} />
       <Heading style={{ position: 'relative', top: 5 }}>
         {moe(title).map((c, i) => (

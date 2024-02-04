@@ -19,7 +19,13 @@ export default ({ onClick }: {
     return () => clearTimeout(timer)
   })
   return (
-    <Text mt='9' style={{ opacity }} onClick={onClick}>
+    <Text onClick={onClick} style={{
+      opacity,
+      position: 'fixed',
+      width: '100vw',
+      textAlign: 'center',
+      bottom: '20vh',
+    }}>
       {moe('Click to start...').map((c, i) => (
         <Text key={i} size={c.char === '★' ? '1' : '5'} style={{
           ...FontHachiMaruPop,
