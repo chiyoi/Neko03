@@ -70,15 +70,24 @@ const apps: AppLinkProps[] = [
     avatar: {
       src: 'https://latex.neko03.moe/favicon.ico',
       blurhash: 'eKN0e#DjI.9Z4.XSMxRPD%Mx.TIU-BWBoJxvWAIU-;S5XSayITMy%2', // cspell: disable-line
-    }
+    },
   },
   {
     title: 'Neko',
     description: 'Discord assistant.',
     href: 'https://neko.neko03.moe',
     avatar: {
-      src: 'https://neko.neko03.moe/favicon.ico',
+      src: 'https://neko.neko03.moe/assets/Icon.png',
       blurhash: 'eSP6N:Wa.l%L?tD~M{.7NGt7-oa$$ewcMz-=xaMfbbMxXUWUWCM{%M', // cspell: disable-line
-    }
+    },
+  },
+  {
+    title: 'Game of Life',
+    description: "Conway's Game of Life.",
+    href: 'https://game-of-life.neko03.moe',
+    avatar: {
+      src: 'https://game-of-life.neko03.moe/favicon.ico',
+      blurhash: 'eKJ8nuM^Ff*0O9-:kq9aELxa-.VF%M%3wJx]%Lt6nORP~pNbtSs.NH', // cspell: disable-line
+    },
   },
 ]
