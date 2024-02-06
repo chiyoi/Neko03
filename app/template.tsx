@@ -3,11 +3,11 @@ import { ThemeProvider } from 'next-themes'
 import { QueryClientProvider } from '@tanstack/react-query'
 import { WagmiProvider } from 'wagmi'
 import { Theme } from '@radix-ui/themes'
+import { ToastProvider } from '@neko03/general/toast'
+import AccountButton from '@neko03/general/components/AccountButton'
+import HomeLink from '@neko03/general/components/HomeLink'
 import { wagmiConfig, queryClient } from '@/app/internal/configurations'
 import { ChildrenProps } from '@/app/internal/props'
-import { ToastProvider } from '@/app/internal/toast'
-import AccountButton from '@/app/components/AccountButton'
-import HomeLink from '@/app/components/HomeLink'
 
 export default ({ children }: ChildrenProps) => (
   <ThemeProvider attribute='class'>

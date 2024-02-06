@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { Text } from '@radix-ui/themes'
-import { moe } from '@/app/internal/moe'
+import { moe } from '@neko03/general/moe'
 import { FontHachiMaruPop } from '@/app/internal/fonts'
 
 export default ({ onClick }: {

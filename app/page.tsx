@@ -1,11 +1,11 @@
 'use client'
 import { useState } from 'react'
 import { Avatar, Box, Flex, Grid, Heading, Text } from '@radix-ui/themes'
+import { moe } from '@neko03/general/moe'
 import AppLink from '@/app/components/AppLink'
 import { AppLinkProps } from '@/app/internal/props'
 import Nekos from '@/app/components/Nekos'
 import { Blurhash } from 'react-blurhash'
-import { moe } from '@/app/internal/moe'
 import { FontHachiMaruPop } from '@/app/internal/fonts'
 import ClickToStart from '@/app/components/ClickToStart'
 
