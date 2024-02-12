@@ -64,12 +64,30 @@ export default () => {
 
 const apps: AppLinkProps[] = [
   {
+    title: 'Neko03',
+    description: 'Neko03 catalog.',
+    href: '/',
+    avatar: {
+      src: '/favicon.ico',
+      blurhash: 'eFOy9Q.RC8?ty=]P-pO@={=wJ#sVt+i_R-b^RQIqv#vgIVRkH@%Lo^', // cspell: disable-line
+    },
+  },
+  {
     title: 'LaTex',
     description: 'Render LaTeX on type.',
     href: 'https://latex.neko03.moe',
     avatar: {
       src: 'https://latex.neko03.moe/favicon.ico',
       blurhash: 'eKN0e#DjI.9Z4.XSMxRPD%Mx.TIU-BWBoJxvWAIU-;S5XSayITMy%2', // cspell: disable-line
+    },
+  },
+  {
+    title: 'Assets',
+    description: 'Assets provider.',
+    href: 'https://assets.neko03.moe',
+    avatar: {
+      src: 'https://assets.neko03.moe/favicon.ico',
+      blurhash: 'eAJacl.90~9$Z#?w-p.959rppx-o-;S5R5^Io}Ip?GIv?wMxn#o|-n', // cspell: disable-line
     },
   },
   {
@@ -84,9 +102,9 @@ const apps: AppLinkProps[] = [
   {
     title: 'Game of Life',
     description: "Conway's Game of Life.",
-    href: 'https://game-of-life.neko03.moe',
+    href: 'https://op5.neko03.moe',
     avatar: {
-      src: 'https://game-of-life.neko03.moe/favicon.ico',
+      src: 'https://op5.neko03.moe/favicon.ico',
       blurhash: 'eKJ8nuM^Ff*0O9-:kq9aELxa-.VF%M%3wJx]%Lt6nORP~pNbtSs.NH', // cspell: disable-line
     },
   },

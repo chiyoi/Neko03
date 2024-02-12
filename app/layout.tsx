@@ -5,7 +5,7 @@ import { ChildrenProps } from '@/app/internal/props'
 
 export const metadata: Metadata = {
   title: 'Neko03',
-  description: 'にゃん〜',
+  description: 'Neko03 catalog.',
   icons: {
     icon: '/favicon.ico',
   }
