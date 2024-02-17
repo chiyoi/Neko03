@@ -35,7 +35,7 @@ export default () => {
             WebkitMaskImage: 'linear-gradient(transparent, black, transparent)',
           }} fallback={(
             <Blurhash width='100%' height='100%' resolutionX={32} resolutionY={32} hash={
-              'e5L;5Uns4X1Z8@%Q%eNCrHRP06yC_2VXxn{gITPB0fnPDSxSDjfm9F' // cspell: disable-line
+              'e6L;5Usc8~61DJ%j%LNDraRP06yC^+VXxn{%IUO@0fi{DSxSIBWF9Z' // cspell: disable-line
             } />
           )} />
           <Heading>
@@ -69,16 +69,16 @@ const apps: AppLinkProps[] = [
     href: '/',
     avatar: {
       src: '/assets/Icons/op1.png',
-      blurhash: 'eFOy9Q.RC8?ty=]P-pO@={=wJ#sVt+i_R-b^RQIqv#vgIVRkH@%Lo^', // cspell: disable-line
+      blurhash: 'eFOy9Q.RC8?ty=]P-pO@={=wJ#sBt+i_R+b^RQIpv#vgIVRkH@%Lo_', // cspell: disable-line
     },
   },
   {
-    title: 'X as You Type',
-    description: 'Do some render or calculate as you type.',
+    title: 'Render As You Type',
+    description: 'Do some rendering as you type.',
     href: 'https://op2.neko03.moe',
     avatar: {
       src: '/assets/Icons/op2.png',
-      blurhash: 'eKN0e#DjI.9Z4.XSMxRPD%Mx.TIU-BWBoJxvWAIU-;S5XSayITMy%2', // cspell: disable-line
+      blurhash: 'eKN0e#DjI.9Z4.XSMxRPD%Mx.TIU-BWBoJxuWAIU-;S5bvWVITMy%1', // cspell: disable-line
     },
   },
   {
@@ -87,7 +87,7 @@ const apps: AppLinkProps[] = [
     href: 'https://op3.neko03.moe',
     avatar: {
       src: '/assets/Icons/op3.png',
-      blurhash: 'eAJacl.90~9$Z#?w-p.959rppx-o-;S5R5^Io}Ip?GIv?wMxn#o|-n', // cspell: disable-line
+      blurhash: 'eAJacl.90~9$Z#?w-p.959rppx-o-;S5R5^Io}Ip?GIv?wMxn#kp-n', // cspell: disable-line
     },
   },
   {
@@ -96,7 +96,7 @@ const apps: AppLinkProps[] = [
     href: 'https://op4.neko03.moe',
     avatar: {
       src: '/assets/Icons/op4.png',
-      blurhash: 'eSP6N:Wa.l%L?tD~M{.7NGt7-oa$$ewcMz-=xaMfbbMxXUWUWCM{%M', // cspell: disable-line
+      blurhash: 'eSO{%Lb1.l%M?tD~M{.7NGt7-oa$$fwcMz-=xaMfbbMxXUWUWCM{%M', // cspell: disable-line
     },
   },
   {
@@ -105,7 +105,7 @@ const apps: AppLinkProps[] = [
     href: 'https://op5.neko03.moe',
     avatar: {
       src: '/assets/Icons/op5.png',
-      blurhash: 'eKJ8nuM^Ff*0O9-:kq9aELxa-.VF%M%3wJx]%Lt6nORP~pNbtSs.NH', // cspell: disable-line
+      blurhash: 'eJJI9MMwFzysSw-:kq9aELxt-oVF%M%MwJx]-pt6i_RP~pNdtSs.NH', // cspell: disable-line
     },
   },
 ]
