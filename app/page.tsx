@@ -83,7 +83,7 @@ const apps: AppLinkProps[] = [
   },
   {
     title: 'Assets',
-    description: 'Assets provider.',
+    description: 'Neko03 assets provider.',
     href: 'https://op3.neko03.moe',
     avatar: {
       src: '/assets/Icons/op3.png',
