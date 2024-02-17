@@ -65,7 +65,7 @@ export default () => {
 const apps: AppLinkProps[] = [
   {
     title: 'Neko03',
-    description: 'Neko03 catalog.',
+    description: 'Neko03 catalog. (You are here.)',
     href: '/',
     avatar: {
       src: '/assets/Icons/op1.png',
