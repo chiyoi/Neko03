@@ -1,14 +1,14 @@
 import { useEffect, useState } from 'react'
 import { useQuery } from '@tanstack/react-query'
 import { Avatar } from '@radix-ui/themes'
-import { useWindowSize } from '@uidotdev/usehooks'
+import { useWindowSize } from '@uidotdev/usehooks' // cspell: disable-line
 
 export default () => {
   const { width: windowWidth, height: windowHeight } = useWindowSize()
   const speed = 300
   const { data } = useQuery<string[]>({
-    queryKey: ['nekoPhotos'],
-    queryFn: () => fetch('/assets/nekos/?list').then((res) => res.json()),
+    queryKey: ['photos'],
+    queryFn: () => fetch('/assets/Photos/?list').then((res) => res.json()),
   })
   const pick = (): Photo | undefined => {
     if (data === undefined) return
@@ -64,7 +64,7 @@ export default () => {
     <>
       {photos.map((photo, i) => (
         <Avatar key={photo.filename} radius='none' fallback='Nyan~' src={
-          `/assets/nekos/${photo.filename}`
+          `/assets/Photos/${photo.filename}`
         } style={{
           position: 'fixed',
           height: '100vh',
