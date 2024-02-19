@@ -24,13 +24,5 @@
     "typescript": "^5",
     "wrangler": "^3.24.0"
   },
-  "jest": {
-    "preset": "ts-jest",
-    "testTimeout": 600000,
-    "testEnvironment": "node",
-    "moduleNameMapper": {
-      "@/(.*)": "<rootDir>/$1"
-    }
-  },
   "packageManager": "yarn@4.1.0"
 }
