@@ -31,5 +31,6 @@
     "moduleNameMapper": {
       "@/(.*)": "<rootDir>/$1"
     }
-  }
+  },
+  "packageManager": "yarn@4.1.0"
 }
