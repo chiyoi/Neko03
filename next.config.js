@@ -7,12 +7,6 @@ module.exports = (phase, { defaultConfig }) => {
   }
   return phase === PHASE_DEVELOPMENT_SERVER ? {
     ...config,
-    rewrites: async () => [
-      {
-        source: '/assets/:path*',
-        destination: 'http://neko03.moe/assets/:path*',
-      },
-    ],
   } : {
     ...config,
     output: 'export',

@@ -1,13 +1,13 @@
 import '@radix-ui/themes/styles.css'
 import type { Metadata, Viewport } from 'next'
-import Body from '@neko03/general/components/Body'
+import Body from '@/app/components/Body'
 import { ChildrenProps } from '@/app/internal/props'
 
 export const metadata: Metadata = {
   title: 'Neko03',
   description: 'Neko03 catalog.',
   icons: {
-    icon: '/assets/Icons/op1.png',
+    icon: 'https://assets.neko03.moe/Icons/op1.png',
   }
 }
 
