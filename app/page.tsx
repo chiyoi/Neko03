@@ -56,13 +56,13 @@ const apps: AppLinkProps[] = [
       blurhash: 'eSO{%Lb1.l%M?tD~M{.7NGt7-oa$$fwcMz-=xaMfbbMxXUWUWCM{%M', // cspell: disable-line
     },
   },
-  // {
-  //   title: 'Game of Life',
-  //   description: "Conway's Game of Life.",
-  //   href: 'https://op5.neko03.moe',
-  //   avatar: {
-  //     src: 'https://assets.neko03.moe/Icons/op5.png',
-  //     blurhash: 'eJJI9MMwFzysSw-:kq9aELxt-oVF%M%MwJx]-pt6i_RP~pNdtSs.NH', // cspell: disable-line
-  //   },
-  // },
+  {
+    title: 'Game of Life',
+    description: "Conway's Game of Life.",
+    href: 'https://chiyoi.itch.io/game-of-life',
+    avatar: {
+      src: 'https://assets.neko03.moe/Icons/op5.png',
+      blurhash: 'eJJI9MMwFzysSw-:kq9aELxt-oVF%M%MwJx]-pt6i_RP~pNdtSs.NH', // cspell: disable-line
+    },
+  },
 ]
