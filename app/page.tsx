@@ -32,7 +32,7 @@ const apps: AppLinkProps[] = [
   {
     title: 'Render as You Type',
     description: 'Do some rendering as you type.',
-    href: 'https://op2.neko03.moe',
+    href: 'https://render-as-you-type.neko03.moe',
     avatar: {
       src: 'https://assets.neko03.moe/Icons/op2.png',
       blurhash: 'eKN0e#DjI.9Z4.XSMxRPD%Mx.TIU-BWBoJxuWAIU-;S5bvWVITMy%1', // cspell: disable-line
@@ -41,7 +41,7 @@ const apps: AppLinkProps[] = [
   {
     title: 'Assets',
     description: 'Neko03 assets provider.',
-    href: 'https://op3.neko03.moe',
+    href: 'https://assets.neko03.moe',
     avatar: {
       src: 'https://assets.neko03.moe/Icons/op3.png',
       blurhash: 'eAJacl.90~9$Z#?w-p.959rppx-o-;S5R5^Io}Ip?GIv?wMxn#kp-n', // cspell: disable-line
@@ -50,7 +50,7 @@ const apps: AppLinkProps[] = [
   {
     title: 'Neko',
     description: 'Discord assistant.',
-    href: 'https://op4.neko03.moe',
+    href: 'https://neko.neko03.moe',
     avatar: {
       src: 'https://assets.neko03.moe/Icons/op4.png',
       blurhash: 'eSO{%Lb1.l%M?tD~M{.7NGt7-oa$$fwcMz-=xaMfbbMxXUWUWCM{%M', // cspell: disable-line
