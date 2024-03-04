@@ -12,8 +12,8 @@ export const onRequest: PagesFunction<Env> = async ({ env, params }) => {
     return new Response(item.body, { headers })
   }
   const prefix = key
-  const objects = await env.assets.list({ prefix })
-  const list = objects.objects.map(({ key }) => key.slice(prefix.length))
-  console.debug('list:', list)
+  const { objects } = await env.assets.list({ prefix })
+  if (objects.length === 0) return error(404)
+  const list = objects.map(({ key }) => key.slice(prefix.length))
   return json(list)
 }
