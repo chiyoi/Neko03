@@ -1,59 +1,32 @@
 'use client'
-import { useState } from 'react'
+import { useMemo, useState } from 'react'
 import { Grid } from '@radix-ui/themes'
 import AppLink from '@/app/components/AppLink'
 import { AppLinkProps } from '@/app/internal/props'
 import Welcome from '@/app/components/Welcome'
+import { useQuery } from '@tanstack/react-query'
 
 export default () => {
   const [welcome, setWelcome] = useState(true)
+  const { data: pages } = useQuery<AppLinkProps[]>({
+    queryKey: ['pages'],
+    queryFn: async () => {
+      const response = await fetch('/assets/Pages')
+      const pageNames: string[] = await response.json()
+      return Promise.all(pageNames.map(async pageName => {
+        const response = await fetch(`/assets/Pages/${pageName}`)
+        return response.json()
+      }))
+    }
+  })
   if (welcome) return (
     <Welcome setWelcome={setWelcome} />
   )
-  return (
+  return pages !== undefined && (
     <Grid mt='9' mx='5' width='auto' columns='5'>
-      {apps.map(app => (
-        <AppLink key={app.href} {...app} />
+      {pages.map(page => (
+        <AppLink key={page.href} {...page} />
       ))}
     </Grid>
   )
 }
-
-const apps: AppLinkProps[] = [
-  {
-    title: 'Neko03',
-    description: 'Neko03 catalog. (You are here.)',
-    href: '/',
-    avatar: {
-      src: '/assets/Icons/op1.png',
-      blurhash: 'eFOy9Q.RC8?ty=]P-pO@={=wJ#sBt+i_R+b^RQIpv#vgIVRkH@%Lo_', // cspell: disable-line
-    },
-  },
-  {
-    title: 'Render as You Type',
-    description: 'Do some rendering as you type.',
-    href: 'https://render-as-you-type.neko03.moe',
-    avatar: {
-      src: '/assets/Icons/op2.png',
-      blurhash: 'eKN0e#DjI.9Z4.XSMxRPD%Mx.TIU-BWBoJxuWAIU-;S5bvWVITMy%1', // cspell: disable-line
-    },
-  },
-  {
-    title: 'Neko',
-    description: 'Discord assistant.',
-    href: 'https://neko.neko03.moe',
-    avatar: {
-      src: '/assets/Icons/op4.png',
-      blurhash: 'eSO{%Lb1.l%M?tD~M{.7NGt7-oa$$fwcMz-=xaMfbbMxXUWUWCM{%M', // cspell: disable-line
-    },
-  },
-  {
-    title: 'Game of Life',
-    description: "Conway's Game of Life.",
-    href: 'https://chiyoi.itch.io/game-of-life',
-    avatar: {
-      src: '/assets/Icons/op5.png',
-      blurhash: 'eJJI9MMwFzysSw-:kq9aELxt-oVF%M%MwJx]-pt6i_RP~pNdtSs.NH', // cspell: disable-line
-    },
-  },
-]

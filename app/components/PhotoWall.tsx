@@ -8,7 +8,7 @@ export default () => {
   const speed = 300
   const { data } = useQuery<string[]>({
     queryKey: ['photos'],
-    queryFn: () => fetch('/assets/Photos').then((res) => res.json()),
+    queryFn: () => fetch('/assets/Photos').then(r => r.json()),
   })
   const pick = (): Photo | undefined => {
     if (data === undefined) return

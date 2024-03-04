@@ -2,6 +2,8 @@
 .vscode
 *.swp
 
+*.dev.*
+
 # yarn
 node_modules
 yarn-debug.log*
