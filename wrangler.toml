@@ -1,0 +1,7 @@
+name = "neko03"
+
+compatibility_flags = ["nodejs_compat"]
+
+[[r2_buckets]]
+binding = "assets"
+bucket_name = "neko03-assets"

@@ -8,7 +8,7 @@ export default () => {
   const speed = 300
   const { data } = useQuery<string[]>({
     queryKey: ['photos'],
-    queryFn: () => fetch('https://assets.neko03.moe/assets/Photos/?list').then((res) => res.json()),
+    queryFn: () => fetch('/assets/Photos').then((res) => res.json()),
   })
   const pick = (): Photo | undefined => {
     if (data === undefined) return
@@ -64,7 +64,7 @@ export default () => {
     <>
       {photos.map((photo, i) => (
         <Avatar key={photo.filename} radius='none' fallback='Nyan~' src={
-          `https://assets.neko03.moe/Photos/${photo.filename}`
+          `/assets/Photos/${photo.filename}`
         } style={{
           position: 'fixed',
           height: '100vh',

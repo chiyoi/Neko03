@@ -13,6 +13,7 @@ yarn-error.log*
 out
 next-env.d.ts
 *.tsbuildinfo
+.vercel
 
 # wrangler
 .wrangler

@@ -22,7 +22,7 @@ export default ({ setWelcome }: { setWelcome: (_: boolean) => void }) => (
       height: '100vh',
     }}>
       <Flex m='auto' direction='column' gap='3' justify='center' align='center'>
-        <Avatar src={'https://assets.neko03.moe/Photos/cat_girl__cute__loli_1231998692.640x320.png'} radius='none' style={{
+        <Avatar src={'/assets/Photos/cat_girl__cute__loli_1231998692.640x320.png'} radius='none' style={{
           width: 320,
           height: 160,
           overflow: 'hidden',

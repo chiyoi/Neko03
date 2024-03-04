@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: 'Neko03',
   description: 'Neko03 catalog.',
   icons: {
-    icon: 'https://assets.neko03.moe/Icons/op1.png',
+    icon: '/assets/Icons/op1.png',
   }
 }
 
