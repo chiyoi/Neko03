@@ -13,6 +13,10 @@ const developmentConfig = {
         source: '/assets/:path*',
         destination: 'http://localhost:8788/assets/:path*',
       },
+      {
+        source: '/favicon.ico',
+        destination: 'http://localhost:8788/favicon.ico',
+      },
     ]
   }
 }
