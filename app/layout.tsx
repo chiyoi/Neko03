@@ -1,6 +1,6 @@
 import '@radix-ui/themes/styles.css'
 import type { Metadata, Viewport } from 'next'
-import Body from '@/app/components/Body'
+import Body from '@neko03/general/components/Body'
 import { ChildrenProps } from '@/app/internal/props'
 
 export const metadata: Metadata = {
