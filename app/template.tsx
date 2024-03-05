@@ -13,10 +13,7 @@ export default ({ children }: ChildrenProps) => (
       <QueryClientProvider client={queryClient}>
         <ToastProvider>
           {children}
-          <HomeLink title='neko03★moe' href='/' avatar={{
-            src: '/assets/Photos/cat_girl__cute__loli_1231998692.640x320.png',
-            blurhash: 'e6L;5Usc8~61DJ%j%LNDraRP06yC^+VXxn{%IUO@0fi{DSxSIBWF9Z', // cspell: disable-line
-          }} />
+          <HomeLink title='neko03★moe' href='/' />
         </ToastProvider>
       </QueryClientProvider>
     </Theme>
