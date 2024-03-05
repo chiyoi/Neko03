@@ -1,7 +1,7 @@
 import { error } from 'itty-router'
 import { Env } from '@/app/internal/env'
 
-const key = 'Icons/op2.png'
+const key = 'Icons/op1.png'
 
 export const onRequest: PagesFunction<Env> = async ({ env }) => {
   const item = await env.ASSETS.get(key)
