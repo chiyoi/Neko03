@@ -7,18 +7,16 @@ const productionConfig = {
 
 /** @type {import('next').NextConfig} */
 const developmentConfig = {
-  rewrites: async () => {
-    return [
-      {
-        source: '/assets/:path*',
-        destination: 'http://localhost:8788/assets/:path*',
-      },
-      {
-        source: '/favicon.ico',
-        destination: 'http://localhost:8788/favicon.ico',
-      },
-    ]
-  }
+  rewrites: async () => [
+    {
+      source: '/storage/:path*',
+      destination: 'http://localhost:8788/storage/:path*',
+    },
+    {
+      source: '/favicon.ico',
+      destination: 'http://localhost:8788/favicon.ico',
+    },
+  ]
 }
 
 module.exports = (phase, { defaultConfig }) => ({

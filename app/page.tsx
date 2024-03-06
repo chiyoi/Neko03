@@ -11,10 +11,10 @@ export default () => {
   const { data: pages } = useQuery<AppLinkProps[]>({
     queryKey: ['pages'],
     queryFn: async () => {
-      const response = await fetch('/assets/Pages')
+      const response = await fetch('/storage/Pages')
       const pageNames: string[] = await response.json()
       return Promise.all(pageNames.map(async pageName => {
-        const response = await fetch(`/assets/Pages/${pageName}`)
+        const response = await fetch(`/storage/Pages/${pageName}`)
         return response.json()
       }))
     }
