@@ -16,15 +16,15 @@
     "next-themes": "^0.2.1",
     "react": "^18.2.0",
     "react-blurhash": "^0.3.0",
-    "react-dom": "^18.2.0",
-    "wrangler": "^3.31.0"
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
     "@cloudflare/workers-types": "^4.20240222.0",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
-    "typescript": "^5.3.3"
+    "typescript": "^5.3.3",
+    "wrangler": "^3.31.0"
   },
   "packageManager": "yarn@4.1.0"
 }
