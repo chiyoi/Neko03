@@ -2,7 +2,7 @@ import { json } from 'itty-router'
 import { Env } from '@/functions/internal/env'
 import { z } from 'zod'
 
-export const onRequest: PagesFunction<Env> = async ({ env, params }) => {
+export const onRequest: PagesFunction<Env> = async ({ env }) => {
   const prefix = 'Neko03/Pages/'
   const { assets } = env
   const { objects } = await assets.list({ prefix })
