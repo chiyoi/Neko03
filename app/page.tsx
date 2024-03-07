@@ -10,14 +10,7 @@ export default () => {
   const [welcome, setWelcome] = useState(true)
   const { data: pages } = useQuery<AppLinkProps[]>({
     queryKey: ['pages'],
-    queryFn: async () => {
-      const response = await fetch('/storage/Pages')
-      const pageNames: string[] = await response.json()
-      return Promise.all(pageNames.map(async pageName => {
-        const response = await fetch(`/storage/Pages/${pageName}`)
-        return response.json()
-      }))
-    }
+    queryFn: () => fetch('/pages').then(r => r.json())
   })
   if (welcome) return (
     <Welcome setWelcome={setWelcome} />

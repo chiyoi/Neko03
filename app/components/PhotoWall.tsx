@@ -8,7 +8,7 @@ export default () => {
   const speed = 300
   const { data } = useQuery<string[]>({
     queryKey: ['photos'],
-    queryFn: () => fetch('/storage/Photos').then(r => r.json()),
+    queryFn: () => fetch('/photos').then(r => r.json()),
   })
   const pick = (): Photo | undefined => {
     if (data === undefined) return
@@ -64,7 +64,7 @@ export default () => {
     <>
       {photos.map((photo, i) => (
         <Avatar key={photo.filename} radius='none' fallback='Nyan~' src={
-          `/storage/Photos/${photo.filename}`
+          `/photos/${photo.filename}`
         } style={{
           position: 'fixed',
           height: '100vh',

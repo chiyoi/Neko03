@@ -1,3 +1,3 @@
 export type Env = {
-  STORAGE: R2Bucket
+  assets: R2Bucket
 }

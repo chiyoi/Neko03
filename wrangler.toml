@@ -1,5 +1,5 @@
 name = "neko03"
 
 [[r2_buckets]]
-binding = "STORAGE"
-bucket_name = "neko03-storage"
+binding = "assets"
+bucket_name = "assets"
