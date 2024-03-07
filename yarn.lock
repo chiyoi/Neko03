@@ -1911,9 +1911,9 @@ __metadata:
   linkType: hard
 
 "caniuse-lite@npm:^1.0.30001579":
-  version: 1.0.30001594
-  resolution: "caniuse-lite@npm:1.0.30001594"
-  checksum: 10c0/738b4ea8b12f040baafe5fe4c63f16f27c10334e0a36cc9786811b781a92c749523abc88cf20a4f4f9da0413e1c13b0482ee8e8b7398a3554742fba036b8ed91
+  version: 1.0.30001596
+  resolution: "caniuse-lite@npm:1.0.30001596"
+  checksum: 10c0/60589001c7d9bb89e2bf08f1aeadd09c867e41661b1fd2c1d562ca8e67a9f645f7dd9572aeca7ffdfff37a4e17ccf6a4cfdd29dde5a7454f5f08f5f372345d13
   languageName: node
   linkType: hard
 
@@ -2709,34 +2709,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"neko03@workspace:.":
-  version: 0.0.0-use.local
-  resolution: "neko03@workspace:."
-  dependencies:
-    "@cloudflare/workers-types": "npm:^4.20240222.0"
-    "@neko03/general": "npm:^0.1.4"
-    "@radix-ui/react-icons": "npm:^1.3.0"
-    "@radix-ui/react-toast": "npm:^1.1.5"
-    "@radix-ui/themes": "npm:^2.0.3"
-    "@stitches/react": "npm:^1.2.8"
-    "@tanstack/react-query": "npm:^5.25.0"
-    "@types/node": "npm:^20"
-    "@types/react": "npm:^18"
-    "@types/react-dom": "npm:^18"
-    "@uidotdev/usehooks": "npm:^2.4.1"
-    blurhash: "npm:^2.0.5"
-    itty-router: "npm:^4.0.27"
-    next: "npm:14.1.1"
-    next-themes: "npm:^0.2.1"
-    react: "npm:^18.2.0"
-    react-blurhash: "npm:^0.3.0"
-    react-dom: "npm:^18.2.0"
-    typescript: "npm:^5.4.2"
-    wrangler: "npm:^3.31.0"
-    zod: "npm:^3.22.4"
-  languageName: unknown
-  linkType: soft
-
 "next-themes@npm:^0.2.1":
   version: 0.2.1
   resolution: "next-themes@npm:0.2.1"
@@ -3160,6 +3132,34 @@ __metadata:
   languageName: node
   linkType: hard
 
+"root-workspace-0b6124@workspace:.":
+  version: 0.0.0-use.local
+  resolution: "root-workspace-0b6124@workspace:."
+  dependencies:
+    "@cloudflare/workers-types": "npm:^4.20240222.0"
+    "@neko03/general": "npm:^0.1.4"
+    "@radix-ui/react-icons": "npm:^1.3.0"
+    "@radix-ui/react-toast": "npm:^1.1.5"
+    "@radix-ui/themes": "npm:^2.0.3"
+    "@stitches/react": "npm:^1.2.8"
+    "@tanstack/react-query": "npm:^5.25.0"
+    "@types/node": "npm:^20"
+    "@types/react": "npm:^18"
+    "@types/react-dom": "npm:^18"
+    "@uidotdev/usehooks": "npm:^2.4.1"
+    blurhash: "npm:^2.0.5"
+    itty-router: "npm:^4.0.27"
+    next: "npm:14.1.1"
+    next-themes: "npm:^0.2.1"
+    react: "npm:^18.2.0"
+    react-blurhash: "npm:^0.3.0"
+    react-dom: "npm:^18.2.0"
+    typescript: "npm:^5.4.2"
+    wrangler: "npm:^3.31.0"
+    zod: "npm:^3.22.4"
+  languageName: unknown
+  linkType: soft
+
 "safer-buffer@npm:>= 2.1.2 < 3.0.0":
   version: 2.1.2
   resolution: "safer-buffer@npm:2.1.2"
@@ -3414,11 +3414,11 @@ __metadata:
 
 "typescript@patch:typescript@npm%3A^5.4.2#optional!builtin<compat/typescript>":
   version: 5.4.2
-  resolution: "typescript@patch:typescript@npm%3A5.4.2#optional!builtin<compat/typescript>::version=5.4.2&hash=d69c25"
+  resolution: "typescript@patch:typescript@npm%3A5.4.2#optional!builtin<compat/typescript>::version=5.4.2&hash=5adc0c"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver
-  checksum: 10c0/22e2f213c3ffe5960c5eaec6c95c04e01858fed57a94be250746f540b935b2c18c3c3fc80d3ab65d28c0aba1eb76284557ba3bf521d28caee811c44ba2b648f9
+  checksum: 10c0/fcf6658073d07283910d9a0e04b1d5d0ebc822c04dbb7abdd74c3151c7aa92fcddbac7d799404e358197222006ccdc4c0db219d223d2ee4ccd9e2b01333b49be
   languageName: node
   linkType: hard
 
