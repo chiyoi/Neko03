@@ -7,23 +7,23 @@
     "@radix-ui/react-toast": "^1.1.5",
     "@radix-ui/themes": "^2.0.3",
     "@stitches/react": "^1.2.8",
-    "@tanstack/react-query": "^5.25.0",
+    "@tanstack/react-query": "^5.27.5",
     "@uidotdev/usehooks": "^2.4.1",
     "blurhash": "^2.0.5",
-    "itty-router": "^4.0.27",
-    "next": "14.1.1",
-    "next-themes": "^0.2.1",
+    "itty-router": "^4.2.0",
+    "next": "14.1.0",
+    "next-themes": "^0.3.0",
     "react": "^18.2.0",
     "react-blurhash": "^0.3.0",
     "react-dom": "^18.2.0",
     "zod": "^3.22.4"
   },
   "devDependencies": {
-    "@cloudflare/workers-types": "^4.20240222.0",
+    "@cloudflare/workers-types": "^4.20240312.0",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "typescript": "^5.4.2",
-    "wrangler": "^3.31.0"
+    "wrangler": "^3.33.0"
   }
 }

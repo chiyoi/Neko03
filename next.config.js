@@ -1,5 +1,10 @@
 const { PHASE_DEVELOPMENT_SERVER } = require('next/constants')
 
+module.exports = (phase, { defaultConfig }) => ({
+  ...defaultConfig,
+  ...(phase === PHASE_DEVELOPMENT_SERVER ? developmentConfig : productionConfig),
+})
+
 /** @type {import('next').NextConfig} */
 const productionConfig = {
   output: 'export',
@@ -30,8 +35,3 @@ const developmentConfig = {
     },
   ]
 }
-
-module.exports = (phase, { defaultConfig }) => ({
-  ...defaultConfig,
-  ...(phase === PHASE_DEVELOPMENT_SERVER ? developmentConfig : productionConfig),
-})
