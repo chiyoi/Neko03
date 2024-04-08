@@ -1,4 +1,3 @@
-'use client'
 import { Avatar, Box, Flex, Heading, Text } from '@radix-ui/themes'
 import { moe } from '@neko03/general/moe'
 import PhotoWall from '@/app/components/PhotoWall'
