@@ -9,7 +9,7 @@ import { ChildrenProps } from '@/app/internal/props'
 
 export default ({ children }: ChildrenProps) => (
   <ThemeProvider attribute='class'>
-    <Theme accentColor='pink'>
+    <Theme accentColor='pink' hasBackground={false}>
       <QueryClientProvider client={queryClient}>
         <ToastProvider>
           {children}

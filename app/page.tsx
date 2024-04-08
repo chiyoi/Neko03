@@ -16,7 +16,7 @@ export default () => {
     <Welcome setWelcome={setWelcome} />
   )
   return pages !== undefined && (
-    <Grid mt='9' mx='5' width='auto' columns='5'>
+    <Grid pt='9' px='5' width='auto' columns='5'>
       {pages.map(page => (
         <AppLink key={page.href} {...page} />
       ))}
