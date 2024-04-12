@@ -18,7 +18,7 @@ export default ({ title, description, href, avatar }: AppLinkProps) => (
               avatar.blurhash
             } />
           } />
-          <Text style={{ ...FontNotoSansMono }}>{title}</Text>
+          <Text as='div' wrap='nowrap' style={{ ...FontNotoSansMono }}>{title}</Text>
         </AppLinkFlex>
       </Link>
     </LinkText>

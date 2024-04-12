@@ -1,7 +1,7 @@
 'use client'
 import { Blurhash } from 'react-blurhash'
 import Link from 'next/link'
-import { Avatar, Flex, Heading, Text } from '@radix-ui/themes'
+import { Avatar, Box, Flex, Heading, Text } from '@radix-ui/themes'
 
 import { moe } from './common/moe'
 import { FontHachiMaruPop } from './common/fonts'
@@ -11,11 +11,17 @@ import ClickToStart from './ClickToStart'
 export default () => (
   <Link href='/home' style={{ textDecorationLine: 'unset' }}>
     <PhotoWall />
-    <Flex justify='center' align='center' style={{
+    <Box style={{
+      position: 'fixed',
       width: '100vw',
       height: '100vh',
       backgroundColor: 'var(--accent-2)',
       opacity: 0.8,
+    }} />
+    <Flex justify='center' align='center' style={{
+      position: 'absolute',
+      width: '100vw',
+      height: '100vh',
     }}>
       <Flex direction='column' gap='3' justify='center' align='center'>
         <Avatar src={'/photos/cat_girl__cute__loli_1231998692.640x320.png'} radius='none' style={{
