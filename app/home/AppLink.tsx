@@ -2,8 +2,9 @@ import Link from 'next/link'
 import { styled } from '@stitches/react'
 import { Avatar, Flex, Text, Link as LinkText, Tooltip } from '@radix-ui/themes'
 import { Blurhash } from 'react-blurhash'
-import { FontNotoSansMono } from '@/app/internal/fonts'
-import { AppLinkProps } from '@/app/internal/props'
+
+import { FontNotoSansMono } from '../common/fonts'
+import { AppLinkProps } from '../common/props'
 
 export default ({ title, description, href, avatar }: AppLinkProps) => (
   <Tooltip side='bottom' content={description}>

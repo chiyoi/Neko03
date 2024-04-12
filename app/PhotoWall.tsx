@@ -7,7 +7,7 @@ export default () => {
   const { width: windowWidth, height: windowHeight } = useWindowSize()
   const speed = 300
   const { data } = useQuery<string[]>({
-    queryKey: ['photos'],
+    queryKey: ['/photos'],
     queryFn: () => fetch('/photos').then(r => r.json()),
   })
   const pick = (): Photo | undefined => {
@@ -30,7 +30,8 @@ export default () => {
   const push = () => {
     let photo: Photo | undefined
     do photo = pick()
-    while (photo === undefined || hasDuplicate(photo.filename))
+    while (photo === undefined)
+    // while (photo === undefined || hasDuplicate(photo.filename))
     setPhotos(photos => [...photos, photo ?? { filename: 'Error', width: 0, height: 0 }])
   }
   const shift = () => {

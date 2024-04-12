@@ -1,11 +1,10 @@
 import { useEffect, useState } from 'react'
 import { Text } from '@radix-ui/themes'
-import { moe } from '@neko03/general/moe'
-import { FontHachiMaruPop } from '@/app/internal/fonts'
 
-export default ({ onClick }: {
-  onClick: () => void,
-}) => {
+import { moe } from './common/moe'
+import { FontHachiMaruPop } from './common/fonts'
+
+export default () => {
   const [opacity, setOpacity] = useState(1)
   const [opacityDelta, setOpacityDelta] = useState(-0.01)
   useEffect(() => {
@@ -19,7 +18,7 @@ export default ({ onClick }: {
     return () => clearTimeout(timer)
   })
   return (
-    <Text onClick={onClick} style={{
+    <Text style={{
       opacity,
       position: 'fixed',
       width: '100vw',

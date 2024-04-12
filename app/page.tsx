@@ -1,25 +1,46 @@
 'use client'
-import { useState } from 'react'
-import { Grid } from '@radix-ui/themes'
-import AppLink from '@/app/components/AppLink'
-import { AppLinkProps } from '@/app/internal/props'
-import Welcome from '@/app/components/Welcome'
-import { useQuery } from '@tanstack/react-query'
+import { Blurhash } from 'react-blurhash'
+import Link from 'next/link'
+import { Avatar, Flex, Heading, Text } from '@radix-ui/themes'
 
-export default () => {
-  const [welcome, setWelcome] = useState(true)
-  const { data: pages } = useQuery<AppLinkProps[]>({
-    queryKey: ['pages'],
-    queryFn: () => fetch('/pages').then(r => r.json())
-  })
-  if (welcome) return (
-    <Welcome setWelcome={setWelcome} />
-  )
-  return pages !== undefined && (
-    <Grid pt='9' px='5' width='auto' columns='5'>
-      {pages.map(page => (
-        <AppLink key={page.href} {...page} />
-      ))}
-    </Grid>
-  )
-}
+import { moe } from './common/moe'
+import { FontHachiMaruPop } from './common/fonts'
+import PhotoWall from './PhotoWall'
+import ClickToStart from './ClickToStart'
+
+export default () => (
+  <Link href='/home' style={{ textDecorationLine: 'unset' }}>
+    <PhotoWall />
+    <Flex justify='center' align='center' style={{
+      width: '100vw',
+      height: '100vh',
+      backgroundColor: 'var(--accent-2)',
+      opacity: 0.8,
+    }}>
+      <Flex direction='column' gap='3' justify='center' align='center'>
+        <Avatar src={'/photos/cat_girl__cute__loli_1231998692.640x320.png'} radius='none' style={{
+          width: 320,
+          height: 160,
+          overflow: 'hidden',
+          maskImage: 'linear-gradient(transparent, black, transparent)',
+          WebkitMaskImage: 'linear-gradient(transparent, black, transparent)',
+        }} fallback={(
+          <Blurhash width='100%' height='100%' resolutionX={32} resolutionY={32} hash={
+            'e6L;5Usc8~61DJ%j%LNDraRP06yC^+VXxn{%IUO@0fi{DSxSIBWF9Z' // cspell: disable-line
+          } />
+        )} />
+        <Heading>
+          {moe('neko03★moe').map((c, i) => (
+            <Text key={i} size={c.char === '★' ? '3' : '9'} style={{
+              ...FontHachiMaruPop,
+              color: `var(--${c.color}-8)`,
+            }}>
+              {c.char}
+            </Text>
+          ))}
+        </Heading>
+      </Flex>
+    </Flex>
+    <ClickToStart />
+  </Link>
+)

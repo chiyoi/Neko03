@@ -1,5 +1,5 @@
-import { error, json } from 'itty-router'
-import { Env } from '@/functions/internal/env'
+import { error } from 'itty-router'
+import { Env } from '../common/env'
 
 export const onRequest: PagesFunction<Env> = async ({ env, params }) => {
   const { filename } = params

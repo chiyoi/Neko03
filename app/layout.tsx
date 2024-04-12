@@ -1,8 +1,9 @@
 import '@radix-ui/themes/styles.css'
 import type { Metadata, Viewport } from 'next'
-import Body from '@neko03/general/components/Body'
-import { ChildrenProps } from '@/app/internal/props'
-import Providers from '@/app/components/Providers'
+
+import Body from './common/Body'
+import { ChildrenProps } from './common/props'
+import ClientLayout from './ClientLayout'
 
 export const metadata: Metadata = {
   title: 'Neko03',
@@ -21,10 +22,8 @@ export const viewport: Viewport = {
 
 export default ({ children }: ChildrenProps) => (
   <html lang='en'>
-    <Body style={{ margin: 0 }}>
-      <Providers>
-        {children}
-      </Providers>
-    </Body>
+    <ClientLayout>
+      {children}
+    </ClientLayout>
   </html>
 )
