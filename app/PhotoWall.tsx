@@ -24,14 +24,8 @@ export default () => {
 
   const [firstXVH, setFirstXVH] = useState(0)
   const [photos, setPhotos] = useState<Photo[]>([])
-  const hasDuplicate = (filename: string) => photos.some(
-    photo => photo.filename === filename
-  )
   const push = () => {
-    let photo: Photo | undefined
-    do photo = pick()
-    while (photo === undefined)
-    // while (photo === undefined || hasDuplicate(photo.filename))
+    const photo = pick()
     setPhotos(photos => [...photos, photo ?? { filename: 'Error', width: 0, height: 0 }])
   }
   const shift = () => {

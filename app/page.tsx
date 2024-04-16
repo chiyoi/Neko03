@@ -24,7 +24,7 @@ export default () => (
       height: '100vh',
     }}>
       <Flex direction='column' gap='3' justify='center' align='center'>
-        <Avatar src={'/photos/cat_girl__cute__loli_1231998692.640x320.png'} radius='none' style={{
+        <Avatar src={'/photos/Anything 1231998692.640x320.png'} radius='none' style={{
           width: 320,
           height: 160,
           overflow: 'hidden',
