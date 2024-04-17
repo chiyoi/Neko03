@@ -11,7 +11,10 @@ export default () => {
     queryFn: async () => {
       const response = await fetch('/pages')
       if (!response.ok) throw new Error(`Code ${response.status}`)
-      return AppLinkProps.array().parse(await response.json())
+      const item = await response.json()
+      return AppLinkProps.array()
+        .parse(item)
+        .sort((a, b) => a.date_created > b.date_created ? 1 : -1)
     }
   })
 

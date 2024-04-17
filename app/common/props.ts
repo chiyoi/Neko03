@@ -9,9 +9,11 @@ export const AppLinkProps = z.object({
   title: z.string(),
   description: z.string(),
   href: z.string(),
+  date_created: z.date({ coerce: true }),
   avatar: z.object({
     src: z.string(),
     blurhash: z.string(),
   }),
 })
+
 export type AppLinkProps = z.infer<typeof AppLinkProps>
