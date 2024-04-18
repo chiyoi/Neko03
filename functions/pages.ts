@@ -1,5 +1,4 @@
 import { json } from 'itty-router'
-import { z } from 'zod'
 
 import { Env } from './common/env'
 
