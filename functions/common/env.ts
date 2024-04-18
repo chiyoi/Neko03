@@ -1,3 +1,4 @@
 export type Env = {
-  assets: R2Bucket
+  pages: KVNamespace,
+  assets: R2Bucket,
 }

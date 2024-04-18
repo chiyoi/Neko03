@@ -2,7 +2,7 @@
 import { useQuery } from '@tanstack/react-query'
 import { Grid, Text } from '@radix-ui/themes'
 
-import { AppLinkProps } from '../common/props'
+import { Page } from '../../functions/common/page'
 import AppLink from './AppLink'
 
 export default () => {
@@ -12,7 +12,7 @@ export default () => {
       const response = await fetch('/pages')
       if (!response.ok) throw new Error(`Code ${response.status}`)
       const item = await response.json()
-      return AppLinkProps.array()
+      return Page.array()
         .parse(item)
         .sort((a, b) => a.date_created > b.date_created ? 1 : -1)
     }

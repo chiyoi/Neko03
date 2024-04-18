@@ -3,10 +3,10 @@ import { styled } from '@stitches/react'
 import { Avatar, Flex, Text, Link as LinkText, Tooltip } from '@radix-ui/themes'
 import { Blurhash } from 'react-blurhash'
 
+import { Page } from '../../functions/common/page'
 import { FontNotoSansMono } from '../common/fonts'
-import { AppLinkProps } from '../common/props'
 
-export default ({ title, description, href, avatar }: AppLinkProps) => (
+export default ({ title, description, href, avatar }: Page) => (
   <Tooltip side='bottom' content={description}>
     <LinkText asChild>
       <Link href={href} style={{ margin: 'auto' }}>

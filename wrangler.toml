@@ -4,3 +4,7 @@ pages_build_output_dir = ".next/out"
 [[r2_buckets]]
 binding = "assets"
 bucket_name = "assets"
+
+[[kv_namespaces]]
+binding = "pages"
+id = "2d4d463be36841cf998a800dd7e116b4"
