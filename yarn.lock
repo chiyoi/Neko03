@@ -58,10 +58,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@cloudflare/workers-types@npm:^4.20240405.0":
-  version: 4.20240405.0
-  resolution: "@cloudflare/workers-types@npm:4.20240405.0"
-  checksum: 10c0/887961d47c9d8f62b99fb9c6987d6d9c5b7c463f2dcc0d134565fddea76444674f07860c7fb18657365fc814f1794210ecead13e897ec4f21cca26cffeb8d0b5
+"@cloudflare/workers-types@npm:^4.20240419.0":
+  version: 4.20240419.0
+  resolution: "@cloudflare/workers-types@npm:4.20240419.0"
+  checksum: 10c0/e84f7bb16fb0d929dd91f9e0917f4c6f628b6b33d6894229fabd24350c28cfab2b632b605d5ac81eb56a9af096d9179488b4522d6ed9cc772c3d71a4e8f33717
   languageName: node
   linkType: hard
 
@@ -1668,21 +1668,21 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@tanstack/query-core@npm:5.29.0":
-  version: 5.29.0
-  resolution: "@tanstack/query-core@npm:5.29.0"
-  checksum: 10c0/ec90801c7234a551e347656b02c6e4dcc448722c466cc42eaf03bb69ac535c2e26a74f7189c21cf836cacf41851f30d17beae0f9478017b6220b612e1803eddb
+"@tanstack/query-core@npm:5.31.0":
+  version: 5.31.0
+  resolution: "@tanstack/query-core@npm:5.31.0"
+  checksum: 10c0/4e1ee7a971eb58bf537627a38b9c60176b785ccaea9db342432f21434c04b2aa656b83eba57e1a976f27964357c91b18bb75703ae58b22d2c04e7f6e965c34ce
   languageName: node
   linkType: hard
 
-"@tanstack/react-query@npm:^5.29.2":
-  version: 5.29.2
-  resolution: "@tanstack/react-query@npm:5.29.2"
+"@tanstack/react-query@npm:^5.31.0":
+  version: 5.31.0
+  resolution: "@tanstack/react-query@npm:5.31.0"
   dependencies:
-    "@tanstack/query-core": "npm:5.29.0"
+    "@tanstack/query-core": "npm:5.31.0"
   peerDependencies:
     react: ^18.0.0
-  checksum: 10c0/80a47d2c04b1f68b8890c7d48c4e6330c0c83569f751d91a631291ca4f32e5521663b93cfd12fa06800aa73ae50a372b91614b85679eec3a92dba5b4c5f87b2e
+  checksum: 10c0/5eca0d3f684deb643bdd0ba08b4c0de4bdc8821d3b9d2aeb4d05c37d62f92d45db2cec5ab0fdf498e2946dedefdd071d6bb28d8ff87cc43166b241df62ad0752
   languageName: node
   linkType: hard
 
@@ -2557,10 +2557,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"itty-router@npm:^5.0.15":
-  version: 5.0.15
-  resolution: "itty-router@npm:5.0.15"
-  checksum: 10c0/d4a20e3e01a5482abf1d52f9dcf9bbab06b09aa2d06db513362d3656f0c229b1acd2208d88f1d4fed59d04f00c58f1ec4a263eec9180f10fe64238c89cea0bd2
+"itty-router@npm:^5.0.16":
+  version: 5.0.16
+  resolution: "itty-router@npm:5.0.16"
+  checksum: 10c0/608bab1c80210f1d7391ddf9660248dd512b9b11dcb004b3e2b5a98a5da27711eafa9957455b4403438255834ad29684551cad9d01b1d8959ffb5f9a352fb4b8
   languageName: node
   linkType: hard
 
@@ -3275,18 +3275,18 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "root-workspace-0b6124@workspace:."
   dependencies:
-    "@cloudflare/workers-types": "npm:^4.20240405.0"
+    "@cloudflare/workers-types": "npm:^4.20240419.0"
     "@radix-ui/react-icons": "npm:^1.3.0"
     "@radix-ui/react-toast": "npm:^1.1.5"
     "@radix-ui/themes": "npm:^3.0.2"
     "@stitches/react": "npm:^1.2.8"
-    "@tanstack/react-query": "npm:^5.29.2"
+    "@tanstack/react-query": "npm:^5.31.0"
     "@types/node": "npm:^20"
     "@types/react": "npm:^18"
     "@types/react-dom": "npm:^18"
     "@uidotdev/usehooks": "npm:^2.4.1"
     blurhash: "npm:^2.0.5"
-    itty-router: "npm:^5.0.15"
+    itty-router: "npm:^5.0.16"
     next: "npm:14.2.2"
     next-themes: "npm:^0.3.0"
     nodemon: "npm:^3.1.0"
@@ -3294,8 +3294,8 @@ __metadata:
     react-blurhash: "npm:^0.3.0"
     react-dom: "npm:^18.2.0"
     typescript: "npm:^5.4.5"
-    wrangler: "npm:^3.51.0"
-    zod: "npm:^3.22.4"
+    wrangler: "npm:^3.51.2"
+    zod: "npm:^3.23.3"
   languageName: unknown
   linkType: soft
 
@@ -3734,9 +3734,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"wrangler@npm:^3.51.0":
-  version: 3.51.0
-  resolution: "wrangler@npm:3.51.0"
+"wrangler@npm:^3.51.2":
+  version: 3.51.2
+  resolution: "wrangler@npm:3.51.2"
   dependencies:
     "@cloudflare/kv-asset-handler": "npm:0.3.1"
     "@esbuild-plugins/node-globals-polyfill": "npm:^0.2.3"
@@ -3765,7 +3765,7 @@ __metadata:
   bin:
     wrangler: bin/wrangler.js
     wrangler2: bin/wrangler.js
-  checksum: 10c0/a4595e5cd499f2455838215bb67871cbac4210566a19359783b8627ba26d41765bb03762f69ebd3b53badaa398144a54fe8e3c60f0c838cec323c3f33d0cad6f
+  checksum: 10c0/d99d5e63605496caf34439ef55957a0370a6ad9b754307da7d5dc112b539d4267d322269dd630371935219a9267760040aedb5f54b33bc757c3b05ea08305da5
   languageName: node
   linkType: hard
 
@@ -3838,9 +3838,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"zod@npm:^3.20.6, zod@npm:^3.22.4":
+"zod@npm:^3.20.6":
   version: 3.22.4
   resolution: "zod@npm:3.22.4"
   checksum: 10c0/7578ab283dac0eee66a0ad0fc4a7f28c43e6745aadb3a529f59a4b851aa10872b3890398b3160f257f4b6817b4ce643debdda4fb21a2c040adda7862cab0a587
+  languageName: node
+  linkType: hard
+
+"zod@npm:^3.23.3":
+  version: 3.23.3
+  resolution: "zod@npm:3.23.3"
+  checksum: 10c0/4ad8b72215f5144d09b359d9aba410ede3ce0d3693f39ed09b932dbb13db439f15c0ca569c479807d4778a3f8b1cc48c2621c1e2aada9624b12a2a6870ef6086
   languageName: node
   linkType: hard
