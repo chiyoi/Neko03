@@ -3,8 +3,7 @@ import { styled } from '@stitches/react'
 import { Avatar, Flex, Text, Link as LinkText, Tooltip } from '@radix-ui/themes'
 import { Blurhash } from 'react-blurhash'
 
-import { Page } from '../../functions/common/page'
-import { FontNotoSansMono } from '../common/fonts'
+import { Page } from '@/functions/common/page'
 
 export default ({ title, description, href, avatar }: Page) => (
   <Tooltip side='bottom' content={description}>
@@ -18,7 +17,7 @@ export default ({ title, description, href, avatar }: Page) => (
               avatar.blurhash
             } />
           } />
-          <Text as='div' wrap='nowrap' style={{ ...FontNotoSansMono }}>{title}</Text>
+          <Text as='div' wrap='nowrap'>{title}</Text>
         </AppLinkFlex>
       </Link>
     </LinkText>

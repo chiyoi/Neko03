@@ -1,5 +1,6 @@
 import { error, json } from 'itty-router'
-import { Env } from '../common/env'
+
+import { Env } from '@/functions/common/env'
 
 export const onRequest: PagesFunction<Env> = async ({ env, params }) => {
   const prefix = 'Photos/'

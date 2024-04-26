@@ -1,17 +1,19 @@
 import { useEffect, useState } from 'react'
-import { useQuery } from '@tanstack/react-query'
 import { Avatar } from '@radix-ui/themes'
 import { useWindowSize } from '@uidotdev/usehooks'
+import { z } from 'zod'
+
+import { useQueryData } from '@/app/common/hooks'
+import ErrorMessage from '@/app/common/ErrorMessage'
+import LoadingMessage from '@/app/common/LoadingMessage'
+
+const speed = 300
 
 export default () => {
   const { width: windowWidth, height: windowHeight } = useWindowSize()
-  const speed = 300
-  const { data } = useQuery<string[]>({
-    queryKey: ['/photos'],
-    queryFn: () => fetch('/photos').then(r => r.json()),
-  })
+  const [data, status] = useQueryData('/photos', z.string().array())
   const pick = (): Photo | undefined => {
-    if (data === undefined) return
+    if (status !== 'success') return
     const filename = data[Math.floor(Math.random() * data.length)]
     return { filename, ...size(filename) }
   }
@@ -37,7 +39,7 @@ export default () => {
   const xVH = () => [firstXVH, ...photos.map((prefixSum => photo => prefixSum += widthVH(photo))(firstXVH)).slice(0, -1)]
 
   useEffect(() => {
-    if (data === undefined || windowHeight === null || windowWidth === null) return
+    if (status !== 'success' || windowHeight === null || windowWidth === null) return
     const rightVH = firstXVH + totalWidthVH()
     const right = rightVH / 100 * windowHeight
     if (right >= windowWidth) return
@@ -55,6 +57,12 @@ export default () => {
     return () => clearTimeout(timer)
   }, [])
 
+  if (status === 'error') return (
+    <ErrorMessage error={data} />
+  )
+  if (status === 'loading') return (
+    <LoadingMessage />
+  )
   return (
     <>
       {photos.map((photo, i) => (

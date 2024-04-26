@@ -1,16 +1,17 @@
 import '@radix-ui/themes/styles.css'
 import type { Metadata, Viewport } from 'next'
 
-import Body from './common/Body'
-import { ChildrenProps } from './common/props'
-import ClientLayout from './ClientLayout'
+import '@/app/theme.css'
+import ClientLayout from '@/app/ClientLayout'
+import { ChildrenProps } from '@/app/common/props'
+import { NotoSansMonoVariable } from '@/app/common/fonts'
 
 export const metadata: Metadata = {
   title: 'Neko03',
-  description: 'Neko03 catalog.',
+  description: 'Nyan!',
   icons: {
     icon: '/icon.png',
-  }
+  },
 }
 
 export const viewport: Viewport = {
@@ -21,7 +22,7 @@ export const viewport: Viewport = {
 }
 
 export default ({ children }: ChildrenProps) => (
-  <html lang='en'>
+  <html lang='en' className={NotoSansMonoVariable}>
     <ClientLayout>
       {children}
     </ClientLayout>

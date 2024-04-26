@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react'
 import { Text } from '@radix-ui/themes'
 
-import { moe } from './common/moe'
-import { FontHachiMaruPop } from './common/fonts'
+import { FontHachiMaruPop } from '@/app/common/fonts'
+import { moe } from '@/app/common/moe'
 
 export default () => {
   const [opacity, setOpacity] = useState(1)

@@ -2,8 +2,13 @@
     "compilerOptions": {
         "target": "esnext",
         "types": [
-            "@cloudflare/workers-types",
+            "@cloudflare/workers-types"
         ],
+        "paths": {
+            "@/*": [
+                "./*"
+            ]
+        },
         "lib": [
             "dom",
             "dom.iterable",

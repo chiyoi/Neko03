@@ -3,10 +3,10 @@ import { Blurhash } from 'react-blurhash'
 import Link from 'next/link'
 import { Avatar, Box, Flex, Heading, Text } from '@radix-ui/themes'
 
-import { moe } from './common/moe'
-import { FontHachiMaruPop } from './common/fonts'
-import PhotoWall from './PhotoWall'
-import ClickToStart from './ClickToStart'
+import PhotoWall from '@/app/PhotoWall'
+import { FontHachiMaruPop } from '@/app/common/fonts'
+import ClickToStart from '@/app/ClickToStart'
+import { moe } from '@/app/common/moe'
 
 export default () => (
   <Link href='/home' style={{ textDecorationLine: 'unset' }}>

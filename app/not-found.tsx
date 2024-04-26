@@ -1,10 +1,12 @@
 'use client'
-import { Flex, Text } from '@radix-ui/themes'
+import { Card, Container } from '@radix-ui/themes'
 
-import { FontHachiMaruPop } from './common/fonts'
+import NotFound from '@/app/common/NotFoundMessage'
 
 export default () => (
-  <Flex justify='center' align='center' style={{ height: '100vh' }}>
-    <Text color='pink' style={{ ...FontHachiMaruPop }}>Empty Here</Text>
-  </Flex>
+  <Container pt='9' px='5'>
+    <Card>
+      <NotFound />
+    </Card>
+  </Container>
 )

@@ -1,11 +1,10 @@
-import React from 'react'
 import Link from 'next/link'
 import { Flex, Heading, IconButton, Text } from '@radix-ui/themes'
 import { GitHubLogoIcon } from '@radix-ui/react-icons'
 import { styled } from '@stitches/react'
 
-import { moe } from './moe'
-import { FontHachiMaruPop } from './fonts'
+import { FontHachiMaruPop } from '@/app/common/fonts'
+import { moe } from '@/app/common/moe'
 
 export default ({ title, href }: Props) => (
   <Flex gap='3' align='center' style={{
