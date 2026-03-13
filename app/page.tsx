@@ -47,6 +47,5 @@ export default () => (
         </Heading>
       </Flex>
     </Flex>
-    <ClickToStart />
   </Link>
 )
