@@ -9,7 +9,7 @@ import ClickToStart from '@/app/ClickToStart'
 import { moe } from '@/app/common/moe'
 
 export default () => (
-  <Link href='/home' style={{ textDecorationLine: 'unset' }}>
+  <>
     <PhotoWall />
     <Box style={{
       position: 'fixed',
@@ -47,5 +47,5 @@ export default () => (
         </Heading>
       </Flex>
     </Flex>
-  </Link>
+  </>
 )

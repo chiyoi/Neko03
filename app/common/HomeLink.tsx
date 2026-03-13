@@ -9,7 +9,7 @@ import { moe } from '@/app/common/moe'
 export default ({ title, href }: Props) => (
   <Flex gap='3' align='center' style={{
     position: 'fixed',
-    left: 5,
+    right: 5,
     top: 5,
   }}>
     <Link href='https://github.com/chiyoi'>
