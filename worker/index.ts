@@ -4,7 +4,7 @@ export default {
     async fetch(request) {
         const url = new URL(request.url)
 
-        if (url.pathname === 'nyan') {
+        if (url.pathname === '/nyan') {
             return text('Nyan!')
         }
 
