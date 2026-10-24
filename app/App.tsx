@@ -4,6 +4,7 @@ import NotFound from './common/NotFound'
 import Blurhash from './blurhash/Blurhash'
 import Latex from './latex/Latex'
 import Home from './Home'
+import GithubCard from './githubcard/GithubCard'
 
 export default function App() {
     return (
@@ -12,6 +13,7 @@ export default function App() {
                 <Route path='/' element={<Home />} />
                 <Route path='/blurhash' element={<Blurhash />} />
                 <Route path='/latex' element={<Latex />} />
+                <Route path='/githubcard' element={<GithubCard />} />
                 <Route path='*' element={<NotFound />} />
             </Routes>
         </BrowserRouter>
