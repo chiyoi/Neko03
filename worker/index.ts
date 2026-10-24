@@ -11,7 +11,7 @@ router.get('/game-of-life/:key?', (request, env: Env) => {
     if (typeof key !== 'string') {
         return Response.redirect(new URL('/game-of-life/index.html', request.url).toString())
     }
-    return r2(games, 'game-of-life/' + key)
+    return r2(games, 'game-of-life/' + key) || Response.redirect(new URL('/', request.url).toString())
 })
 
 router.get('*', (request) => Response.redirect(new URL('/', request.url).toString()))
