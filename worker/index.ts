@@ -14,6 +14,6 @@ router.get('/game-of-life/:key?', (request, env: Env) => {
     return r2(games, 'game-of-life/' + key)
 })
 
-router.get('*', (request, env: Env) => env.ASSETS.fetch(request))
+router.get('*', (request) => Response.redirect(new URL('/', request.url).toString()))
 
 export default { ...router }
