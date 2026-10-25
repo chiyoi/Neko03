@@ -13,8 +13,9 @@ export default function Home() {
             <Flex direction='column' gap='3' justify='center' align='center'>
                 <Heading>
                     {moe('neko03★moe').map((c, i) => (
-                        <Text key={i} size={c.char === '★' ? '1' : '5'} style={{
+                        <Text key={i} size='5' style={{
                             ...FontHachiMaruPop,
+                            ...(c.char === '★' ? { fontSize: '30%' } : {}),
                             color: `var(--${c.color}-8)`,
                         }}>
                             {c.char}
